@@ -44,11 +44,15 @@ export type DockItemProps = {
 export type DockLabelProps = {
   className?: string;
   children: React.ReactNode;
+  width?: MotionValue<number>;
+  isHovered?: MotionValue<number>;
 };
 
 export type DockIconProps = {
   className?: string;
   children: React.ReactNode;
+  width?: MotionValue<number>;
+  isHovered?: MotionValue<number>;
 };
 
 export type DocContextType = {
@@ -166,7 +170,7 @@ function DockItem({ children, className, onClick }: DockItemProps) {
       onClick={onClick}
     >
       {Children.map(children, (child) =>
-        cloneElement(child as React.ReactElement, { width, isHovered })
+        cloneElement(child as React.ReactElement<DockIconProps | DockLabelProps>, { width, isHovered })
       )}
     </motion.div>
   );
