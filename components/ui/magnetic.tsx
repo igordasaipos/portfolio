@@ -63,6 +63,7 @@ export function Magnetic({
     }
   }, [ref, isHovered, intensity, range])
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (actionArea === 'parent' && ref.current?.parentElement) {
       const parent = ref.current.parentElement

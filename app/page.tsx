@@ -215,7 +215,7 @@ export default function Personal() {
           >
             <div className="flex h-full items-center justify-between">
               <div>
-                <h3 className="text-base font-medium text-zinc-900 dark:text-zinc-100">Let's work together</h3>
+                <h3 className="text-base font-medium text-zinc-900 dark:text-zinc-100">Let&apos;s work together</h3>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400">Get in touch for opportunities</p>
               </div>
               <svg className="h-5 w-5 text-zinc-600 transition-transform group-hover:translate-x-1 dark:text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
