@@ -230,6 +230,49 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
+        <h3 className="mb-4 text-lg font-medium">Tools</h3>
+        <div className="flex flex-wrap gap-3">
+          <div className="flex items-center gap-2 rounded-xl bg-zinc-50/40 px-4 py-2.5 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+            <svg className="h-5 w-5 text-zinc-600 dark:text-zinc-400" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019 3.019-1.355 3.019-3.019v-3.019H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z"/>
+            </svg>
+            <span className="text-sm font-medium text-zinc-900 dark:text-zinc-100">Figma</span>
+          </div>
+
+          <div className="flex items-center gap-2 rounded-xl bg-zinc-50/40 px-4 py-2.5 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+            <svg className="h-5 w-5 text-zinc-600 dark:text-zinc-400" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.4c5.302 0 9.6 4.298 9.6 9.6s-4.298 9.6-9.6 9.6-9.6-4.298-9.6-9.6S6.698 2.4 12 2.4zm-1.2 4.8v9.6l8.4-4.8-8.4-4.8z"/>
+            </svg>
+            <span className="text-sm font-medium text-zinc-900 dark:text-zinc-100">Lovable</span>
+          </div>
+
+          <div className="flex items-center gap-2 rounded-xl bg-zinc-50/40 px-4 py-2.5 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+            <svg className="h-5 w-5 text-zinc-600 dark:text-zinc-400" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13.5 6.9c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5-2.5-1.1-2.5-2.5zM16 0c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7zm0 12c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM8 7c0-2.2.9-4.2 2.3-5.6C9.6.5 8.8 0 8 0 3.6 0 0 3.6 0 8s3.6 8 8 8c.8 0 1.6-.1 2.3-.4C9 14.2 8 12.2 8 10V7zm0 9c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7zm0 12c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z"/>
+            </svg>
+            <span className="text-sm font-medium text-zinc-900 dark:text-zinc-100">Webflow</span>
+          </div>
+
+          <div className="flex items-center gap-2 rounded-xl bg-zinc-50/40 px-4 py-2.5 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+            <svg className="h-5 w-5 text-zinc-600 dark:text-zinc-400" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21.469 0.582c-0.088-0.063-0.205-0.063-0.293 0l-3.292 2.346c-0.088 0.063-0.088 0.166 0 0.229l3.292 2.346c0.088 0.063 0.205 0.063 0.293 0l3.292-2.346c0.088-0.063 0.088-0.166 0-0.229l-3.292-2.346zm-9.882 7.036c-0.088-0.063-0.205-0.063-0.293 0l-3.292 2.346c-0.088 0.063-0.088 0.166 0 0.229l3.292 2.346c0.088 0.063 0.205 0.063 0.293 0l3.292-2.346c0.088-0.063 0.088-0.166 0-0.229l-3.292-2.346zm9.882 0c-0.088-0.063-0.205-0.063-0.293 0l-3.292 2.346c-0.088 0.063-0.088 0.166 0 0.229l3.292 2.346c0.088 0.063 0.205 0.063 0.293 0l3.292-2.346c0.088-0.063 0.088-0.166 0-0.229l-3.292-2.346zm-19.764 0c-0.088-0.063-0.205-0.063-0.293 0l-3.292 2.346c-0.088 0.063-0.088 0.166 0 0.229l3.292 2.346c0.088 0.063 0.205 0.063 0.293 0l3.292-2.346c0.088-0.063 0.088-0.166 0-0.229l-3.292-2.346zm9.882 7.036c-0.088-0.063-0.205-0.063-0.293 0l-3.292 2.346c-0.088 0.063-0.088 0.166 0 0.229l3.292 2.346c0.088 0.063 0.205 0.063 0.293 0l3.292-2.346c0.088-0.063 0.088-0.166 0-0.229l-3.292-2.346z"/>
+            </svg>
+            <span className="text-sm font-medium text-zinc-900 dark:text-zinc-100">WordPress</span>
+          </div>
+
+          <div className="flex items-center gap-2 rounded-xl bg-zinc-50/40 px-4 py-2.5 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+            <svg className="h-5 w-5 text-zinc-600 dark:text-zinc-400" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 3h6v6H3V3zm0 12h6v6H3v-6zm12-12h6v6h-6V3zm0 12h6v6h-6v-6zM11 11V5H5v6h6zm8 0V5h-6v6h6zm-8 8v-6H5v6h6zm8 0v-6h-6v6h6z"/>
+            </svg>
+            <span className="text-sm font-medium text-zinc-900 dark:text-zinc-100">Cursor</span>
+          </div>
+        </div>
+      </motion.section>
+
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
         <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {PROJECTS.map((project) => (
