@@ -232,37 +232,57 @@ export default function Personal() {
       >
         <h3 className="mb-4 text-lg font-medium">Tools</h3>
         <div className="flex flex-wrap gap-3">
+          {/* Figma */}
           <div className="flex items-center gap-2 rounded-xl bg-zinc-50/40 px-4 py-2.5 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-            <svg className="h-5 w-5 text-zinc-600 dark:text-zinc-400" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019 3.019-1.355 3.019-3.019v-3.019H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z"/>
+            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none">
+              <path d="M8 24C10.2091 24 12 22.2091 12 20V16H8C5.79086 16 4 17.7909 4 20C4 22.2091 5.79086 24 8 24Z" fill="#0ACF83"/>
+              <path d="M4 12C4 9.79086 5.79086 8 8 8H12V16H8C5.79086 16 4 14.2091 4 12Z" fill="#A259FF"/>
+              <path d="M4 4C4 1.79086 5.79086 0 8 0H12V8H8C5.79086 8 4 6.20914 4 4Z" fill="#F24E1E"/>
+              <path d="M12 0H16C18.2091 0 20 1.79086 20 4C20 6.20914 18.2091 8 16 8H12V0Z" fill="#FF7262"/>
+              <path d="M20 12C20 14.2091 18.2091 16 16 16C13.7909 16 12 14.2091 12 12C12 9.79086 13.7909 8 16 8C18.2091 8 20 9.79086 20 12Z" fill="#1ABCFE"/>
             </svg>
             <span className="text-sm font-medium text-zinc-900 dark:text-zinc-100">Figma</span>
           </div>
 
+          {/* Lovable */}
           <div className="flex items-center gap-2 rounded-xl bg-zinc-50/40 px-4 py-2.5 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-            <svg className="h-5 w-5 text-zinc-600 dark:text-zinc-400" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.4c5.302 0 9.6 4.298 9.6 9.6s-4.298 9.6-9.6 9.6-9.6-4.298-9.6-9.6S6.698 2.4 12 2.4zm-1.2 4.8v9.6l8.4-4.8-8.4-4.8z"/>
+            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="11" fill="url(#lovable-gradient)"/>
+              <path d="M7 12L10 15L17 8" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <defs>
+                <linearGradient id="lovable-gradient" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                  <stop stopColor="#FF6B6B"/>
+                  <stop offset="1" stopColor="#FF8E8E"/>
+                </linearGradient>
+              </defs>
             </svg>
             <span className="text-sm font-medium text-zinc-900 dark:text-zinc-100">Lovable</span>
           </div>
 
+          {/* Webflow */}
           <div className="flex items-center gap-2 rounded-xl bg-zinc-50/40 px-4 py-2.5 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-            <svg className="h-5 w-5 text-zinc-600 dark:text-zinc-400" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M13.5 6.9c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5-2.5-1.1-2.5-2.5zM16 0c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7zm0 12c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zM8 7c0-2.2.9-4.2 2.3-5.6C9.6.5 8.8 0 8 0 3.6 0 0 3.6 0 8s3.6 8 8 8c.8 0 1.6-.1 2.3-.4C9 14.2 8 12.2 8 10V7zm0 9c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7zm0 12c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z"/>
+            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none">
+              <path d="M17.5 9.5C17.5 12.26 13.69 16 12 16C10.31 16 6.5 12.26 6.5 9.5C6.5 6.74 8.5 4.5 12 4.5C15.5 4.5 17.5 6.74 17.5 9.5Z" fill="#4353FF"/>
+              <path d="M12 16C10.31 16 6.5 12.26 6.5 9.5H2C2 14.5 6 19.5 12 19.5C18 19.5 22 14.5 22 9.5H17.5C17.5 12.26 13.69 16 12 16Z" fill="#4353FF"/>
             </svg>
             <span className="text-sm font-medium text-zinc-900 dark:text-zinc-100">Webflow</span>
           </div>
 
+          {/* WordPress */}
           <div className="flex items-center gap-2 rounded-xl bg-zinc-50/40 px-4 py-2.5 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-            <svg className="h-5 w-5 text-zinc-600 dark:text-zinc-400" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M21.469 0.582c-0.088-0.063-0.205-0.063-0.293 0l-3.292 2.346c-0.088 0.063-0.088 0.166 0 0.229l3.292 2.346c0.088 0.063 0.205 0.063 0.293 0l3.292-2.346c0.088-0.063 0.088-0.166 0-0.229l-3.292-2.346zm-9.882 7.036c-0.088-0.063-0.205-0.063-0.293 0l-3.292 2.346c-0.088 0.063-0.088 0.166 0 0.229l3.292 2.346c0.088 0.063 0.205 0.063 0.293 0l3.292-2.346c0.088-0.063 0.088-0.166 0-0.229l-3.292-2.346zm9.882 0c-0.088-0.063-0.205-0.063-0.293 0l-3.292 2.346c-0.088 0.063-0.088 0.166 0 0.229l3.292 2.346c0.088 0.063 0.205 0.063 0.293 0l3.292-2.346c0.088-0.063 0.088-0.166 0-0.229l-3.292-2.346zm-19.764 0c-0.088-0.063-0.205-0.063-0.293 0l-3.292 2.346c-0.088 0.063-0.088 0.166 0 0.229l3.292 2.346c0.088 0.063 0.205 0.063 0.293 0l3.292-2.346c0.088-0.063 0.088-0.166 0-0.229l-3.292-2.346zm9.882 7.036c-0.088-0.063-0.205-0.063-0.293 0l-3.292 2.346c-0.088 0.063-0.088 0.166 0 0.229l3.292 2.346c0.088 0.063 0.205 0.063 0.293 0l3.292-2.346c0.088-0.063 0.088-0.166 0-0.229l-3.292-2.346z"/>
+            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="11" fill="#21759B"/>
+              <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM3.5 12C3.5 11.12 3.65 10.28 3.92 9.5L8.85 21.92C5.82 20.82 3.5 16.76 3.5 12ZM12 20.5C11.15 20.5 10.33 20.38 9.56 20.15L12.69 11.35L15.92 20.02C15.95 20.1 15.99 20.17 16.03 20.24C14.82 20.42 13.43 20.5 12 20.5ZM13.56 8.65C14.23 8.62 14.84 8.54 14.84 8.54C15.44 8.47 15.37 7.62 14.77 7.65C14.77 7.65 13.01 7.77 11.89 7.77C10.84 7.77 9.06 7.65 9.06 7.65C8.46 7.62 8.39 8.5 8.99 8.54C8.99 8.54 9.56 8.62 10.16 8.65L11.73 13.12L9.56 19.65L6.04 8.65C6.71 8.62 7.32 8.54 7.32 8.54C7.92 8.47 7.85 7.62 7.25 7.65C7.25 7.65 5.49 7.77 4.37 7.77C4.17 7.77 3.93 7.77 3.67 7.76C5.38 5.07 8.47 3.5 12 3.5C14.67 3.5 17.08 4.59 18.85 6.36C18.81 6.36 18.77 6.35 18.73 6.35C17.68 6.35 16.94 7.2 16.94 8.12C16.94 8.92 17.43 9.58 17.95 10.35C18.35 10.98 18.82 11.77 18.82 12.92C18.82 13.72 18.52 14.65 18.11 15.85L17.18 18.92L13.56 8.65ZM16.43 20.92L19.6 11.35C20.23 9.85 20.42 8.65 20.42 7.62C20.42 7.32 20.4 7.05 20.37 6.8C21.03 8.22 21.5 9.85 21.5 12C21.5 15.77 19.58 19.08 16.43 20.92Z" fill="white"/>
             </svg>
             <span className="text-sm font-medium text-zinc-900 dark:text-zinc-100">WordPress</span>
           </div>
 
+          {/* Cursor */}
           <div className="flex items-center gap-2 rounded-xl bg-zinc-50/40 px-4 py-2.5 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-            <svg className="h-5 w-5 text-zinc-600 dark:text-zinc-400" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M3 3h6v6H3V3zm0 12h6v6H3v-6zm12-12h6v6h-6V3zm0 12h6v6h-6v-6zM11 11V5H5v6h6zm8 0V5h-6v6h6zm-8 8v-6H5v6h6zm8 0v-6h-6v6h6z"/>
+            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none">
+              <rect width="24" height="24" rx="5" fill="black"/>
+              <path d="M6 6L18 6L18 18L6 18L6 6Z" fill="white"/>
+              <circle cx="12" cy="12" r="2" fill="black"/>
             </svg>
             <span className="text-sm font-medium text-zinc-900 dark:text-zinc-100">Cursor</span>
           </div>
