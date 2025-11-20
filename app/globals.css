@@ -20,6 +20,17 @@
   }
 }
 
+/* Custom text selection color */
+::selection {
+  background-color: #D2F525;
+  color: #000000;
+}
+
+::-moz-selection {
+  background-color: #D2F525;
+  color: #000000;
+}
+
 :root {
   --sh-class: #7aa2f7;
   --sh-sign: #89ddff;
