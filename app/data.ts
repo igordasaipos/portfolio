@@ -27,22 +27,53 @@ type SocialLink = {
   link: string
 }
 
+type Tool = {
+  name: string
+  icon: string
+}
+
+export const TOOLS: Tool[] = [
+  {
+    name: 'Figma',
+    icon: 'bxl-figma',
+  },
+  {
+    name: 'Webflow',
+    icon: 'bx-globe',
+  },
+  {
+    name: 'WordPress',
+    icon: 'bxl-wordpress',
+  },
+  {
+    name: 'VS Code',
+    icon: 'bxl-visual-studio',
+  },
+  {
+    name: 'React',
+    icon: 'bxl-react',
+  },
+  {
+    name: 'Next.js',
+    icon: 'bx-code-alt',
+  },
+]
+
 export const PROJECTS: Project[] = [
   {
-    name: 'Motion Primitives Pro',
+    name: 'Superelements.io',
     description:
-      'Advanced components and templates to craft beautiful websites.',
-    link: 'https://pro.motion-primitives.com/',
+      'Component Library for Elementor',
+    link: 'https://superelements.io/',
     video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+      'https://www.youtube.com/watch?v=vptLCiaCndI&t=10s',
     id: 'project1',
   },
   {
-    name: 'Motion Primitives',
-    description: 'UI kit to make beautiful, animated interfaces.',
-    link: 'https://motion-primitives.com/',
-    video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+    name: 'iFood Move',
+    description: 'Sistema para coleta de melhorias no produto',
+    link: 'https://www.linkedin.com/feed/update/urn:li:activity:7366264130992824321/',
+    video: '/1756254225196.jpeg',
     id: 'project2',
   },
 ]
