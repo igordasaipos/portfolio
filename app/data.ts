@@ -13,6 +13,7 @@ type WorkExperience = {
   end: string
   link: string
   id: string
+  description?: string
 }
 
 type BlogPost = {
@@ -88,6 +89,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     end: 'Present',
     link: 'https://www.saipos.com',
     id: 'work1',
+    description: 'Leading product design initiatives, creating user-centered solutions and design systems for a SaaS platform.',
   },
   {
     company: 'CRM PipeRun',
@@ -96,6 +98,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     end: 'Mar 2024',
     link: 'https://www.piperun.com',
     id: 'work2',
+    description: 'Developed responsive web interfaces and marketing materials, improving user experience across multiple touchpoints.',
   },
   {
     company: 'GVdasa Inteligência Educacional',
@@ -104,6 +107,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     end: 'Mai 2023',
     link: 'https://www.gvdasa.com.br',
     id: 'work3',
+    description: 'Conducting user-centered design processes and methodologies. Creating visually appealing interfaces. Creating low and high-fidelity prototypes. Conducting usability tests.',
   },
   {
     company: 'Go Deep (F1 Commerce)',
@@ -112,6 +116,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     end: 'Nov 2021',
     link: 'https://www.godeep.ag',
     id: 'work4',
+    description: 'UI Designer • Full-time\nMar 2020 - Nov 2021 • 1 year 9 months\nSão Leopoldo, Rio Grande do Sul, Brasil\n\nEstagiário de design gráfico\nSet 2019 - Mar 2020 • 7 months\nSão Leopoldo',
   },
 ]
 
