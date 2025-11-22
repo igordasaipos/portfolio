@@ -223,7 +223,7 @@ export default function Personal() {
               key={project.name}
               className="sticky block"
               style={{
-                top: '120px',
+                top: '80px',
                 zIndex: index + 1,
               }}
               href={project.link}
