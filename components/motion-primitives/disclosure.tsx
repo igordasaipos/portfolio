@@ -118,8 +118,7 @@ export function DisclosureTrigger({
           return child;
         }
 
-        const element = child as React.ReactElement;
-        return React.cloneElement(element, {
+        return React.cloneElement(child, {
           onClick: toggle,
           role: 'button',
           'aria-expanded': open,
@@ -130,9 +129,8 @@ export function DisclosureTrigger({
               toggle();
             }
           },
-          className: cn(className, element.props.className),
-          ...element.props,
-        });
+          className: cn(className, (child.props as { className?: string }).className),
+        } as React.HTMLAttributes<HTMLElement>);
       })}
     </>
   );
