@@ -82,28 +82,36 @@ export const PROJECTS: Project[] = [
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    company: 'Reglazed Studio',
-    title: 'CEO',
-    start: '2024',
+    company: 'Saipos',
+    title: 'Designer de produtos',
+    start: 'Mar 2024',
     end: 'Present',
-    link: 'https://ibelick.com',
+    link: 'https://www.saipos.com',
     id: 'work1',
   },
   {
-    company: 'Freelance',
-    title: 'Design Engineer',
-    start: '2022',
-    end: '2024',
-    link: 'https://ibelick.com',
+    company: 'CRM PipeRun',
+    title: 'Web designer pleno',
+    start: 'Mar 2023',
+    end: 'Mar 2024',
+    link: 'https://www.piperun.com',
     id: 'work2',
   },
   {
-    company: 'Freelance',
-    title: 'Front-end Developer',
-    start: '2017',
-    end: 'Present',
-    link: 'https://ibelick.com',
+    company: 'GVdasa Inteligência Educacional',
+    title: 'UX Designer',
+    start: 'Nov 2021',
+    end: 'Mai 2023',
+    link: 'https://www.gvdasa.com.br',
     id: 'work3',
+  },
+  {
+    company: 'Go Deep (F1 Commerce)',
+    title: 'UI Designer',
+    start: 'Mar 2020',
+    end: 'Nov 2021',
+    link: 'https://www.godeep.ag',
+    id: 'work4',
   },
 ]
 
@@ -138,20 +146,12 @@ export const BLOG_POSTS: BlogPost[] = [
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    label: 'Github',
-    link: 'https://github.com/ibelick',
+    label: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/igorpinheirocc',
   },
   {
     label: 'Twitter',
-    link: 'https://twitter.com/ibelick',
-  },
-  {
-    label: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/ibelick',
-  },
-  {
-    label: 'Instagram',
-    link: 'https://www.instagram.com/ibelick',
+    link: 'https://x.com/igorpinheirocc',
   },
 ]
 
