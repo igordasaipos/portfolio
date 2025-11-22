@@ -11,8 +11,8 @@ export function Header() {
 
   return (
     <>
-      <header className="mb-8 flex items-center justify-between">
-        <div className="flex items-center gap-3">
+      <header className="relative mb-8">
+        <div className="flex flex-col items-start gap-2">
           <motion.div
             initial={{ opacity: 0, filter: 'blur(12px)' }}
             animate={{ opacity: 1, filter: 'blur(0px)' }}
@@ -26,7 +26,7 @@ export function Header() {
               className="rounded-full object-cover"
             />
           </motion.div>
-          <div className="flex flex-col">
+          <div className="flex flex-col items-start">
             <Link href="/" className="font-medium text-black dark:text-white">
               <TextEffect
                 as="span"
@@ -43,17 +43,21 @@ export function Header() {
             </TextLoop>
           </div>
         </div>
-
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="p-2.5 rounded-xl hover:bg-zinc-100/40 dark:hover:bg-zinc-800/40 transition-all ring-1 ring-zinc-200/50 ring-inset dark:ring-zinc-800/50 hover:ring-zinc-300/50 dark:hover:ring-zinc-700/50"
-          aria-label="Menu"
-        >
-          <svg className="w-5 h-5 text-zinc-900 dark:text-zinc-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
       </header>
+
+      <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
+        <div className="mx-auto w-full max-w-screen-sm px-4 pt-4 flex justify-end pr-[40px]">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="pointer-events-auto p-2.5 rounded-xl bg-white dark:bg-zinc-950 hover:bg-zinc-100/40 dark:hover:bg-zinc-800/40 transition-all ring-1 ring-zinc-200/50 ring-inset dark:ring-zinc-800/50 hover:ring-zinc-300/50 dark:hover:ring-zinc-700/50"
+            aria-label="Menu"
+          >
+            <svg className="w-5 h-5 text-zinc-900 dark:text-zinc-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
 
       <AnimatePresence>
         {isMenuOpen && (
@@ -65,14 +69,16 @@ export function Header() {
             className="fixed inset-0 z-50 bg-black/20 backdrop-blur-sm"
             onClick={() => setIsMenuOpen(false)}
           >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0, y: -20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: -20 }}
-              transition={{ type: 'spring', bounce: 0, duration: 0.3 }}
-              onClick={(e) => e.stopPropagation()}
-              className="absolute top-20 right-4 w-80 bg-white dark:bg-zinc-950 rounded-2xl p-1 ring-1 ring-zinc-200 dark:ring-zinc-800"
-            >
+            <div className="fixed top-0 left-0 right-0 pointer-events-none">
+              <div className="mx-auto w-full max-w-screen-sm px-4 flex justify-end pr-[40px]">
+                <motion.div
+                  initial={{ scale: 0.9, opacity: 0, y: -20 }}
+                  animate={{ scale: 1, opacity: 1, y: 0 }}
+                  exit={{ scale: 0.9, opacity: 0, y: -20 }}
+                  transition={{ type: 'spring', bounce: 0, duration: 0.3 }}
+                  onClick={(e) => e.stopPropagation()}
+                  className="pointer-events-auto mt-14 w-80 bg-white dark:bg-zinc-950 rounded-2xl p-1 ring-1 ring-zinc-200 dark:ring-zinc-800"
+                >
               <div className="grid grid-cols-2 gap-3 p-4">
                 {/* LinkedIn Card */}
                 <a
@@ -123,7 +129,9 @@ export function Header() {
                   </div>
                 </a>
               </div>
-            </motion.div>
+                </motion.div>
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
