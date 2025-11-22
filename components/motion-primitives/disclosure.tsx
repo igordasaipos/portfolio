@@ -118,7 +118,7 @@ export function DisclosureTrigger({
           return child;
         }
 
-        const element = child as React.ReactElement<any>;
+        const element = child as React.ReactElement;
         return React.cloneElement(element, {
           onClick: toggle,
           role: 'button',
