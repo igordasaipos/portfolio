@@ -284,7 +284,15 @@ export default function Personal() {
               key={tool.name}
               className="flex items-center gap-2 rounded-xl bg-zinc-50/40 px-4 py-2.5 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50"
             >
-              <i className={`${tool.icon} text-xl text-zinc-900 dark:text-zinc-100`}></i>
+              {tool.iconType === 'svg' ? (
+                <img
+                  src={tool.icon}
+                  alt={`${tool.name} icon`}
+                  className="h-5 w-5"
+                />
+              ) : (
+                <i className={`${tool.icon} text-xl text-zinc-900 dark:text-zinc-100`}></i>
+              )}
               <span className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
                 {tool.name}
               </span>

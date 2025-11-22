@@ -30,32 +30,34 @@ type SocialLink = {
 type Tool = {
   name: string
   icon: string
+  iconType?: 'boxicon' | 'svg'
 }
 
 export const TOOLS: Tool[] = [
   {
     name: 'Figma',
-    icon: 'bxl-figma',
+    icon: '/icons/figma.svg',
+    iconType: 'svg',
+  },
+  {
+    name: 'Lovable',
+    icon: '/icons/lovable.svg',
+    iconType: 'svg',
   },
   {
     name: 'Webflow',
-    icon: 'bx-globe',
+    icon: '/icons/webflow.svg',
+    iconType: 'svg',
   },
   {
     name: 'WordPress',
-    icon: 'bxl-wordpress',
+    icon: '/icons/wordpress.svg',
+    iconType: 'svg',
   },
   {
-    name: 'VS Code',
-    icon: 'bxl-visual-studio',
-  },
-  {
-    name: 'React',
-    icon: 'bxl-react',
-  },
-  {
-    name: 'Next.js',
-    icon: 'bx-code-alt',
+    name: 'Cursor',
+    icon: '/icons/cursor.svg',
+    iconType: 'svg',
   },
 ]
 
