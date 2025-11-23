@@ -101,7 +101,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     description: 'Developed responsive web interfaces and marketing materials, improving user experience across multiple touchpoints.',
   },
   {
-    company: 'GVdasa Inteligência Educacional',
+    company: 'GVdasa',
     title: 'UX Designer',
     start: 'Nov 2021',
     end: 'Mai 2023',
