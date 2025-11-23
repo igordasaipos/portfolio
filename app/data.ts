@@ -96,7 +96,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Web designer pleno',
     start: 'Mar 2023',
     end: 'Mar 2024',
-    link: 'https://www.piperun.com',
+    link: 'https://www.crmpiperun.com',
     id: 'work2',
     description: 'Developed responsive web interfaces and marketing materials, improving user experience across multiple touchpoints.',
   },
