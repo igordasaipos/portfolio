@@ -128,17 +128,30 @@ function LoadingAnimation() {
     }
   }, [currentIndex, texts.length])
 
+  const currentText = texts[currentIndex]
+  const chars = currentText.split('')
+
   return (
-    <motion.h1
-      key={currentIndex}
-      initial={{ opacity: 0, filter: 'blur(10px)' }}
-      animate={{ opacity: 1, filter: 'blur(0px)' }}
-      exit={{ opacity: 0, filter: 'blur(10px)' }}
-      transition={{ duration: 0.5, ease: 'easeInOut' }}
-      className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-5xl md:text-6xl whitespace-nowrap"
-    >
-      {texts[currentIndex]}
-    </motion.h1>
+    <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-5xl md:text-6xl whitespace-nowrap">
+      <AnimatePresence mode="wait">
+        {chars.map((char, index) => (
+          <motion.span
+            key={`${currentIndex}-${index}`}
+            initial={{ opacity: 0, y: 20, filter: 'blur(8px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            exit={{ opacity: 0, y: -20, filter: 'blur(8px)' }}
+            transition={{
+              duration: 0.4,
+              delay: index * 0.03,
+              ease: [0.4, 0, 0.2, 1]
+            }}
+            className="inline-block"
+          >
+            {char === ' ' ? '\u00A0' : char}
+          </motion.span>
+        ))}
+      </AnimatePresence>
+    </h1>
   )
 }
 
