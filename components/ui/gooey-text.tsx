@@ -29,6 +29,9 @@ export function GooeyText({
     return () => clearInterval(interval);
   }, [texts.length, morphTime, cooldownTime]);
 
+  const currentText = texts[currentIndex];
+  const chars = currentText.split('');
+
   return (
     <div className={cn("relative", className)}>
       <svg className="absolute h-0 w-0" aria-hidden="true" focusable="false">
@@ -50,40 +53,47 @@ export function GooeyText({
       </svg>
 
       <div className="flex items-center justify-center">
-        <AnimatePresence mode="wait">
-          <motion.span
-            key={currentIndex}
-            className={cn(
-              "inline-block select-none text-center",
-              "text-foreground",
-              textClassName
-            )}
-            initial={{
-              opacity: 0,
-              scale: 0.95,
-              y: 20
-            }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              y: 0
-            }}
-            exit={{
-              opacity: 0,
-              scale: 0.95,
-              y: -20
-            }}
-            transition={{
-              duration: morphTime,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            style={{
-              filter: "url(#gooey-threshold)"
-            }}
-          >
-            {texts[currentIndex]}
-          </motion.span>
-        </AnimatePresence>
+        <div
+          className={cn(
+            "inline-block select-none text-center",
+            "text-foreground",
+            textClassName
+          )}
+          style={{
+            filter: "url(#gooey-threshold)"
+          }}
+        >
+          <AnimatePresence mode="wait">
+            {chars.map((char, index) => (
+              <motion.span
+                key={`${currentIndex}-${index}`}
+                className="inline-block"
+                initial={{
+                  opacity: 0,
+                  scale: 0.8,
+                  y: 20
+                }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                  y: 0
+                }}
+                exit={{
+                  opacity: 0,
+                  scale: 0.8,
+                  y: -20
+                }}
+                transition={{
+                  duration: morphTime * 0.6,
+                  delay: index * 0.05,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              >
+                {char === ' ' ? '\u00A0' : char}
+              </motion.span>
+            ))}
+          </AnimatePresence>
+        </div>
       </div>
     </div>
   );
