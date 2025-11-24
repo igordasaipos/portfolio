@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
+import { GooeyText } from '@/components/ui/gooey-text'
 import {
   Disclosure,
   DisclosureTrigger,
@@ -115,43 +116,13 @@ function MagneticSocialLink({
 }
 
 function LoadingAnimation() {
-  const texts = ["welcome", "I'm Igor"]
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const displayTime = 1.2 // seconds for each text
-
-  useEffect(() => {
-    if (currentIndex < texts.length - 1) {
-      const timer = setTimeout(() => {
-        setCurrentIndex(currentIndex + 1)
-      }, displayTime * 1000)
-      return () => clearTimeout(timer)
-    }
-  }, [currentIndex, texts.length])
-
-  const currentText = texts[currentIndex]
-  const chars = currentText.split('')
-
   return (
-    <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-5xl md:text-6xl whitespace-nowrap">
-      <AnimatePresence mode="wait">
-        {chars.map((char, index) => (
-          <motion.span
-            key={`${currentIndex}-${index}`}
-            initial={{ opacity: 0, y: 20, filter: 'blur(8px)' }}
-            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-            exit={{ opacity: 0, y: -20, filter: 'blur(8px)' }}
-            transition={{
-              duration: 0.4,
-              delay: index * 0.03,
-              ease: [0.4, 0, 0.2, 1]
-            }}
-            className="inline-block"
-          >
-            {char === ' ' ? '\u00A0' : char}
-          </motion.span>
-        ))}
-      </AnimatePresence>
-    </h1>
+    <GooeyText
+      texts={["welcome", "I'm Igor"]}
+      morphTime={1.2}
+      cooldownTime={0.3}
+      textClassName="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-5xl md:text-6xl"
+    />
   )
 }
 
