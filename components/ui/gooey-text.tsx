@@ -29,59 +29,35 @@ export function GooeyText({
     return () => clearInterval(interval);
   }, [texts.length, morphTime, cooldownTime]);
 
-  const currentText = texts[currentIndex];
-
   return (
     <div className={cn("relative", className)}>
-      <svg className="absolute h-0 w-0" aria-hidden="true" focusable="false">
-        <defs>
-          <filter id="gooey-threshold">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
-            <feColorMatrix
-              in="blur"
-              type="matrix"
-              values="1 0 0 0 0
-                      0 1 0 0 0
-                      0 0 1 0 0
-                      0 0 0 20 -10"
-              result="gooey"
-            />
-            <feComposite in="SourceGraphic" in2="gooey" operator="atop"/>
-          </filter>
-        </defs>
-      </svg>
-
       <div className="flex items-center justify-center">
         <AnimatePresence mode="wait">
-          <motion.div
+          <motion.h1
             key={currentIndex}
             className={cn(
-              "inline-block select-none text-center",
               "text-foreground",
               textClassName
             )}
-            style={{
-              filter: "url(#gooey-threshold)"
-            }}
             initial={{
               opacity: 0,
-              y: 10
+              filter: "blur(8px)"
             }}
             animate={{
               opacity: 1,
-              y: 0
+              filter: "blur(0px)"
             }}
             exit={{
               opacity: 0,
-              y: -10
+              filter: "blur(8px)"
             }}
             transition={{
-              duration: morphTime * 0.5,
+              duration: 0.5,
               ease: [0.4, 0, 0.2, 1],
             }}
           >
-            {currentText}
-          </motion.div>
+            {texts[currentIndex]}
+          </motion.h1>
         </AnimatePresence>
       </div>
     </div>
