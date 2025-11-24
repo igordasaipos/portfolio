@@ -60,19 +60,16 @@ export function GooeyText({
             )}
             initial={{
               opacity: 0,
-              filter: "blur(20px)",
               scale: 0.95,
               y: 20
             }}
             animate={{
               opacity: 1,
-              filter: "blur(0px)",
               scale: 1,
               y: 0
             }}
             exit={{
               opacity: 0,
-              filter: "blur(20px)",
               scale: 0.95,
               y: -20
             }}
